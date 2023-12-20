@@ -1,0 +1,4 @@
+header li {
+  link: var(--black);
+  color: var(--black);
+}
