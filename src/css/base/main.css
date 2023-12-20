@@ -1,3 +1,4 @@
+/*style des titres et textes*/
 h1 {
   font-family: var(--font-title);
   font-size: var(--h1);
@@ -16,7 +17,7 @@ h3 {
   font-weight: 500;
 }
 
-h3-bold {
+.chapo {
   font-family: var(--font-title);
   font-size: var(--h3);
   font-weight: 700;
@@ -25,7 +26,7 @@ h3-bold {
 h4 {
   font-family: var(--font-quote);
   font-size: var(--h4);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
   font-weight: 400;
 }
 
-small-text {
+.small-text {
   font-family: var(--font-text);
   font-size: var(--small-text);
   font-weight: 400;
@@ -44,4 +45,5 @@ button {
   font-family: var(--font-text);
   font-size: var(--button);
   font-weight: 700;
+  text-transform: uppercase;
 }
