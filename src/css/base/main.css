@@ -1,0 +1,47 @@
+h1 {
+  font-family: var(--font-title);
+  font-size: var(--h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: var(--h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: var(--h3);
+  font-weight: 500;
+}
+
+h3-bold {
+  font-family: var(--font-title);
+  font-size: var(--h3);
+  font-weight: 700;
+}
+
+h4 {
+  font-family: var(--font-quote);
+  font-size: var(--h4);
+  font-weight: 700;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--body);
+  font-weight: 400;
+}
+
+small-text {
+  font-family: var(--font-text);
+  font-size: var(--small-text);
+  font-weight: 400;
+}
+
+button {
+  font-family: var(--font-text);
+  font-size: var(--button);
+  font-weight: 700;
+}
