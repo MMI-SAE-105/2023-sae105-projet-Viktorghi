@@ -22,9 +22,11 @@
   --font-text: "helvetica", sans-serif;
 
   /* Espaces */
-  --space1x: 8px;
+  --space1x: 4px;
   --space2x: 16px;
   --space3x: 24px;
-  --space4x: 48px;
-  --space5x: 80px;
+  --space4x: 32px;
+  --space5x: 48px;
+  --space6x: 72px;
+  --space7x: 120px;
 }
