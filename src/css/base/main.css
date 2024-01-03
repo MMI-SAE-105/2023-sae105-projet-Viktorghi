@@ -6,7 +6,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-title);
+  font-family: var(--font-quote);
   font-size: var(--h2);
   font-weight: 700;
 }
