@@ -1,3 +1,9 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 /*style des titres et textes*/
 h1 {
   font-family: var(--font-title);
@@ -6,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-quote);
+  font-family: var(--font-title);
   font-size: var(--h2);
   font-weight: 700;
 }
@@ -42,8 +48,16 @@ body {
 }
 
 button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 2px solid var(--black);
+  justify-content: center;
+  aligb-items: center;
   font-family: var(--font-text);
+  padding: 7px 12px;
   font-size: var(--button);
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
