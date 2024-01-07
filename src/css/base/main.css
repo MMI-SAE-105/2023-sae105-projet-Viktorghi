@@ -23,12 +23,6 @@ h3 {
   font-weight: 500;
 }
 
-.chapo {
-  font-family: var(--font-title);
-  font-size: var(--h3);
-  font-weight: 700;
-}
-
 h4 {
   font-family: var(--font-quote);
   font-size: var(--h4);
@@ -38,12 +32,6 @@ h4 {
 body {
   font-family: var(--font-text);
   font-size: var(--body);
-  font-weight: 400;
-}
-
-.small-text {
-  font-family: var(--font-text);
-  font-size: var(--small-text);
   font-weight: 400;
 }
 
