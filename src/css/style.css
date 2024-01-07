@@ -15,11 +15,15 @@
 @import "layout/header.css";
 @import "layout/footer.css";
 
+/* Components */
+@import "components/cards.css";
+@import "components/menu.css";
+
 /* Helvetica */
 @font-face {
   font-text: "helvetica";
-  src: url("src/fonts/helveticaregular-webfont.woff2") format("woff2"),
-    url("src/fonts/helveticaregular-webfont.woff") format("woff");
+  src: url("../src/fonts/helveticaregular-webfont.woff2") format("woff2"),
+    url("../src/fonts/helveticaregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
