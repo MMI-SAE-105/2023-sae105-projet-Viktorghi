@@ -1,12 +1,14 @@
 .footer {
-  background-color: var(--black);
-  color: var(--white);
-  padding: 40px 30px;
-  margin-top: 72px;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 48px;
-  display: inline-flex;
+  padding: 40px 30px;
+  margin-top: 72px;
+  background-color: var(--black);
+  color: var(--white);
+  width: auto;
 }
 
 .footer a {
@@ -20,41 +22,32 @@
 }
 
 .footer_list {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 24px;
-  display: inline-flex;
 }
 
-.footer_information {
+.footer_section {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
-  display: inline-flex;
+  text-align: center;
+  padding: 0 30px;
   font-size: var(--small-text);
-}
-
-.footer_title {
-  margin-bottom: 8px;
-  font-size: var(--body);
-  font-weight: 700;
-}
-
-.footer_social {
-  position: relative;
 }
 
 .footer_social-list {
+  padding-top: 16px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 24px;
 }
 
-.footer_mention {
-  flex-direction: column;
-  text-align: center;
-  gap: 8px;
-  display: inline-flex;
-  font-size: var(--small-text);
-  padding: 0 50px;
+.footer_title {
+  font-size: var(--body);
+  font-weight: 700;
 }
