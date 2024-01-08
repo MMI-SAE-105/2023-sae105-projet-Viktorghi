@@ -18,6 +18,7 @@
 /* Components */
 @import "components/cards.css";
 @import "components/menu.css";
+@import "components/head.css";
 
 /* Helvetica */
 @font-face {
