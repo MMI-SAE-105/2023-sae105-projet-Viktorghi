@@ -1,5 +1,5 @@
 .btn {
-  width: fit-content;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -8,4 +8,5 @@
   color: var(--black);
   font-size: var(--button);
   gap: 10px;
+  inline-size: fit-content;
 }
