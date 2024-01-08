@@ -8,5 +8,4 @@
   color: var(--black);
   font-size: var(--button);
   gap: 10px;
-  cursor: pointer;
 }
