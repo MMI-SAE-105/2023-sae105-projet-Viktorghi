@@ -1,0 +1,11 @@
+.chapo {
+  margin-top: 70px;
+}
+.chapo_credit {
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+.chapo_title {
+  line-height: 1.5;
+}

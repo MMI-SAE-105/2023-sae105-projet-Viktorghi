@@ -29,3 +29,7 @@
   z-index: -1;
   transform: translate(5%, 680%);
 }
+
+.section_conclu {
+  margin-top: 32px;
+}
