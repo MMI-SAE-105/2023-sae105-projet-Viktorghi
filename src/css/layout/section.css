@@ -19,7 +19,7 @@
   top: 0;
   align-self: flex-end;
   z-index: -1;
-  transform: translate(20%, -10%);
+  transform: translate(0%, -10%);
 }
 
 .section_dots-end {
@@ -27,5 +27,5 @@
   top: 0;
   align-self: flex-start;
   z-index: -1;
-  transform: translate(-20%, 680%);
+  transform: translate(0%, 680%);
 }
