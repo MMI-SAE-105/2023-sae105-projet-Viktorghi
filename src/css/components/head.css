@@ -2,7 +2,7 @@
   position: relative;
   color: var(--white);
   background-color: var(--white);
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -38,6 +38,7 @@
   justify-content: center;
   text-align: left;
   position: relative;
+  padding-left: 10px;
   z-index: 1;
 }
 
@@ -46,6 +47,7 @@
   justify-content: center;
   text-align: right;
   position: relative;
+  padding-right: 10px;
   z-index: 1;
 }
 
