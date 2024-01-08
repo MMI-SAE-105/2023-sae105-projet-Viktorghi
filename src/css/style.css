@@ -19,6 +19,7 @@
 @import "components/cards.css";
 @import "components/menu.css";
 @import "components/head.css";
+@import "components/hero.css";
 
 /* Helvetica */
 @font-face {

@@ -1,0 +1,26 @@
+.hero {
+  position: relative;
+  color: var(--white);
+  background-color: var(--black);
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.hero_title,
+.hero_sub-title {
+  position: relative;
+  z-index: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+}
