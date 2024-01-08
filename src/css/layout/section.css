@@ -1,0 +1,31 @@
+.section {
+  position: relative;
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section_figure {
+  margin-top: 32px;
+}
+
+.section_figure-figaption {
+  text-align: center;
+}
+
+.section_dots-start {
+  position: absolute;
+  top: 0;
+  align-self: flex-end;
+  z-index: -1;
+  transform: translate(20%, -10%);
+}
+
+.section_dots-end {
+  position: absolute;
+  top: 0;
+  align-self: flex-start;
+  z-index: -1;
+  transform: translate(-20%, 680%);
+}

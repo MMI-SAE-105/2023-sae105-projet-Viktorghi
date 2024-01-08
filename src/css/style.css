@@ -14,12 +14,14 @@
 /*layout*/
 @import "layout/header.css";
 @import "layout/footer.css";
+@import "layout/section.css";
 
 /* Components */
 @import "components/cards.css";
 @import "components/menu.css";
 @import "components/head.css";
 @import "components/hero.css";
+@import "components/button.css";
 
 /* Helvetica */
 @font-face {
