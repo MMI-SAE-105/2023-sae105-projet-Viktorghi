@@ -2,8 +2,9 @@
 
 - NOM : Ghirardelli
 - PRÉNOM : Viktor
-- URL du site :
-- URL FIGMA :
+- URL du site : https://spirits.viktorghirardelli.fr/fr/
+  https://keen-panda-e7292f.netlify.app/fr/
+- URL FIGMA : https://www.figma.com/file/l5uwDht9amEVBYwADEVkmB/Maquettes-projet-individuel-%E2%80%94-Viktor-GHIRARDELLI-1C2?type=design&node-id=1502%3A115&mode=design&t=9owYpIyxqxOfoeoU-1
 
 # Structure de départ pour le projet individuel.
 
