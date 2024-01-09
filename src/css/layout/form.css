@@ -1,0 +1,25 @@
+.form {
+  background-color: var(--green);
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.form_input input {
+  -webkit- appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--black);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.form__input input:focus{
+  outline: 0;
+}
+
+.form label {
+  color: var(--black);
+  font-weight: bold;
+  display: block;
+}

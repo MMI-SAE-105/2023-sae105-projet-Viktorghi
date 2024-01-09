@@ -33,3 +33,14 @@
 .section_conclu {
   margin-top: 32px;
 }
+
+.section_projet {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section_link {
+  text-decoration: none;
+  color: var(--black);
+}
