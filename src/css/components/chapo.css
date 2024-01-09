@@ -1,5 +1,5 @@
 .chapo {
-  margin-top: 70px;
+  position: relative;
 }
 .chapo_credit {
   font-size: var(--small-text);
