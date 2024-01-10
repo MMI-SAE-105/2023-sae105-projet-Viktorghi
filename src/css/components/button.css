@@ -9,4 +9,5 @@
   font-size: var(--button);
   gap: 10px;
   inline-size: fit-content;
+  margin: 0 auto;
 }
