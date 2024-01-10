@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,8 @@
     <title>Spirits — Glossaire</title>
 
     <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
 </head>
 
@@ -22,39 +24,28 @@
         </div>
     
         <div class="header_end">
-            <a class="header_language" href="../en/index.html">
+            <a class="header_language" href="../en/glossary.html">
                 <img src="../public/icon/Language.svg" alt="Changement de langue">
             </a>
     
-            <button class="header_menu-btn menu-btn">
-                <img src="../public/icon/Menu.svg" alt="Menu">
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
             </button>
     
-            <nav class="header_menu menu">
-                <div class="menu_start">
-                    <ul class="menu_list">
-                        <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a
-                                rencontré, on a juste du mal à s’en
-                                souvenir.”</a></li>
-                        <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
-                        <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
-                        <li class="menu_item"><a class="menu_link" href="book.html">La cité des brumes oubliées</a></li>
-                        <li class="menu_item"><a class="menu_link" href="timeline.html">Oeuvres de Sachiko Kashiwaba</a>
-                        </li>
-                        <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
-                    </ul>
-                </div>
-    
-                <div class="menu_end">
-                    <ul class="menu_list">
-                        <li class="menu_item"><a class="menu_link" href="glossary.html">Glossaire</a></li>
-                        <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <a class="menu_language" href="#">
-                        <img src="../public/icon/Language.svg" alt="Changement de langue">
-                    </a>
-                </div>
-    
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a
+                            rencontré, on a juste du mal à s’en
+                            souvenir.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">La cité des brumes oubliées</a></li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Oeuvres de Sachiko Kashiwaba</a></li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossaire</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>    
             </nav>
         </div>
     </header>

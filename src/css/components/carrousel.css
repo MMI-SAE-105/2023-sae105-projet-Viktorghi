@@ -1,0 +1,59 @@
+.carrousel_parent-ecrans {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.carrousel_ecran {
+  width: 100%;
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.carrousel_card {
+  background-color: var(--black);
+  padding-bottom: 20px;
+  max-width: 230px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.carrousel_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrousel_link {
+  text-decoration: none;
+}
+
+.carrousel_text,
+.carrousel_link {
+  color: var(--white);
+  text-align: center;
+}
+
+.carrousel_btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: none;
+  border: solid 1px var(--black);
+  border-radius: 20%;
+  color: var(--black);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 30px;
+}
+
+.carrousel_btn-avant {
+  left: 0px;
+}
+
+.carrousel_btn-apres {
+  right: 0px;
+}

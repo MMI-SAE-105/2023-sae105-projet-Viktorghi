@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="../src/css/style.css">
 
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -22,39 +23,28 @@
         </div>
     
         <div class="header_end">
-            <a class="header_language" href="../en/index.html">
+            <a class="header_language" href="../en/director.html">
                 <img src="../public/icon/Language.svg" alt="Changement de langue">
             </a>
     
-            <button class="header_menu-btn menu-btn">
-                <img src="../public/icon/Menu.svg" alt="Menu">
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
             </button>
     
-            <nav class="header_menu menu">
-                <div class="menu_start">
-                    <ul class="menu_list">
-                        <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a
-                                rencontré, on a juste du mal à s’en
-                                souvenir.”</a></li>
-                        <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
-                        <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
-                        <li class="menu_item"><a class="menu_link" href="book.html">La cité des brumes oubliées</a></li>
-                        <li class="menu_item"><a class="menu_link" href="timeline.html">Oeuvres de Sachiko Kashiwaba</a>
-                        </li>
-                        <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
-                    </ul>
-                </div>
-    
-                <div class="menu_end">
-                    <ul class="menu_list">
-                        <li class="menu_item"><a class="menu_link" href="glossary.html">Glossaire</a></li>
-                        <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <a class="menu_language" href="#">
-                        <img src="../public/icon/Language.svg" alt="Changement de langue">
-                    </a>
-                </div>
-    
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a
+                            rencontré, on a juste du mal à s’en
+                            souvenir.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">La cité des brumes oubliées</a></li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Oeuvres de Sachiko Kashiwaba</a></li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossaire</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -142,111 +132,155 @@
 
         <section class="section container">
             <h2 class="section_title">Long métrage de Hayao Miyazaki</h2>
-            <div class="carrousel">
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel1.webp" alt="Le château de Cagliostro">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=12958.html"><h3>Le château de Cagliostro</h3></a>
-                    <p>1h40 min</p>
-                    <p>Animation, aventure</p>
-                </div>
+            <div class="carrousel container" class="carrousel" x-data="{
+                    hrefCourant: '#ecran-1',
+                }">
+                
+                <button @click="p=$refs.parent; p.scrollLeft -=p.clientWidth" class="carrousel_btn carrousel_btn-avant"
+                    aria-label="slideprécedant">
+                    &lt;
+                </button>
+                <button @click="p=$refs.parent; p.scrollLeft +=p.clientWidth" class="carrousel_btn carrousel_btn-apres"
+                    aria-label="slidesuivant">
+                    >
+                </button>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel2.webp" alt="Nausicaä de la valée du vent">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40132.html">
-                        <h3>Nausicaä de la valée du vent</h3>
-                    </a>
-                    <p>1h57 min</p>
-                    <p>Animation, aventure</p>
-                </div>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                        @scroll.debounce.250ms.passive="hrefCourant = '#'+
+                        [...$refs.parent.children]
+                        .find(e=>e.getBoundingClientRect().x>=0).id">
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel3.webp" alt="Le château dans le ciel">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40133.html">
-                        <h3>Le château dans le ciel</h3>
-                    </a>
-                    <p>2h04 min</p>
-                    <p>Animation, aventure, fantastique</p>
-                </div>
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel1.webp" alt="Le château de Cagliostro">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=12958.html">
+                                <h3>Le château de Cagliostro</h3>
+                            </a>
+                            <p class="carrousel_text">1h40 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel4.webp" alt="Mon voisin Totoro">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=14790.html">
-                        <h3>Mon voisin Totoro</h3>
-                    </a>
-                    <p>1h27 min</p>
-                    <p>Animation</p>
-                </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel2.webp" alt="Nausicaä de la valée du vent">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40132.html">
+                                <h3>Nausicaä de la valée du vent</h3>
+                            </a>
+                            <p class="carrousel_text">1h57 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel5.webp" alt="Kiki la petite sorcière">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40137.html">
-                        <h3>Kiki la petite sorcière</h3>
-                    </a>
-                    <p>1h42 min</p>
-                    <p>Animation, famille, anventure</p>
-                </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel3.webp" alt="Le château dans le ciel">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40133.html">
+                                <h3>Le château dans le ciel</h3>
+                            </a>
+                            <p class="carrousel_text">2h04 min</p>
+                            <p class="carrousel_text">Animation, aventure, fantastique</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel6.webp" alt="Porco Rosso">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=10257.html">
-                        <h3>Porco Rosso</h3>
-                    </a>
-                    <p>1h29 min</p>
-                    <p>Animation, aventure</p>
-                </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel4.webp" alt="Mon voisin Totoro">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=14790.html">
+                                <h3>Mon voisin Totoro</h3>
+                            </a>
+                            <p class="carrousel_text">1h27 min</p>
+                            <p class="carrousel_text">Animation</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel7.webp" alt="Princesse Mononoké">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=73176.html">
-                        <h3>Princesse Mononoké</h3>
-                    </a>
-                    <p>2h15 min</p>
-                    <p>Animation, drame</p>
-                </div>
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel5.webp" alt="Kiki la petite sorcière">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40137.html">
+                                <h3>Kiki la petite sorcière</h3>
+                            </a>
+                            <p class="carrousel_text">1h42 min</p>
+                            <p class="carrousel_text">Animation, famille, anventure</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel8.webp" alt="Le voyage de Chihiro">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=37485.html">
-                        <h3>Le voyage de Chihiro</h3>
-                    </a>
-                    <p>2h05 min</p>
-                    <p>Animation, aventure</p>
-                </div>
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel6.webp" alt="Porco Rosso">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=10257.html">
+                                <h3>Porco Rosso</h3>
+                            </a>
+                            <p class="carrousel_text">1h29 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel9.webp" alt="Le château ambulant">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=50409.html">
-                        <h3>Le château ambulant</h3>
-                    </a>
-                    <p>1h59 min</p>
-                    <p>Animation, fantastique</p>
-                </div>
+                    <div id="ecran-7" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel7.webp" alt="Princesse Mononoké">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=37485.html">
+                                <h3>Princesse Mononoké</h3>
+                            </a>
+                            <p class="carrousel_text">2h15 min</p>
+                            <p class="carrousel_text">Animation, drame</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel10.webp" alt="Ponyo sur la falaise">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=127194.html">
-                        <h3>Ponyo sur la falaise</h3>
-                    </a>
-                    <p>1h41 min</p>
-                    <p>Animation, famille, aventure</p>
-                </div>
+                    <div id="ecran-8" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel8.webp" alt="Le voyage de Chihiro">
+                            <a class="carrousel_link" href="">
+                                <h3>Le voyage de Chihiro</h3>
+                            </a>
+                            <p class="carrousel_text">2h05 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel11.webp" alt="Le vent se lève">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=197176.html">
-                        <h3>Le vent se lève</h3>
-                    </a>
-                    <p>2h07 min</p>
-                    <p>Animation, drame, historique, biopic</p>
-                </div>
+                    <div id="ecran-9" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel9.webp" alt="Le château ambulant">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=50409.html">
+                                <h3>Le château ambulant</h3>
+                            </a>
+                            <p class="carrousel_text">1h59 min</p>
+                            <p class="carrousel_text">Animation, fantastique</p>
+                        </figure>
+                    </div>
 
-                <div>
-                    <img src="../public/img/Carrousel/Img_Carrousel12.webp" alt="Le garçon et le Héron">
-                    <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=184989.html">
-                        <h3>Le garçon et le Héron</h3>
-                    </a>
-                    <p>2h 04min</p>
-                    <p>Animation, Drame, Aventure</p>
+                    <div id="ecran-10" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel10.webp" alt="Ponyo sur la falaise">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=127194.html">
+                                <h3>Ponyo sur la falaise</h3>
+                            </a>
+                            <p class="carrousel_text">1h41 min</p>
+                            <p class="carrousel_text">Animation, famille, aventure</p>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-11" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel11.webp" alt="Le vent se lève">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=197176.html">
+                                <h3>Le vent se lève</h3>
+                            </a>
+                            <p class="carrousel_text">2h07 min</p>
+                            <p class="carrousel_text">Animation, drame, historique, biopic</p>
+                        </figure>
+                    </div>
+
+                    <div id="ecran-12" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel12.webp" alt="Le garçon et le Héron">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=184989.html">
+                                <h3>Le garçon et le Héron</h3>
+                            </a>
+                            <p class="carrousel_text">2h 04min</p>
+                            <p class="carrousel_text">Animation, Drame, Aventure</p>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
