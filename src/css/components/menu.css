@@ -1,7 +1,21 @@
 .menu {
   visibility: hidden;
   opacity: 0;
+  overflow: hidden;
+  display: flex;
   position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--black);
+  color: var(--white);
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu-btn {
@@ -10,4 +24,69 @@
   padding: inherit;
   border: inherit;
   border-radius: inherit;
+  position: relative;
+}
+.menu--open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu_list {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.menu_item {
+  margin-top: 15%;
+}
+
+.menu_link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.menu-btn {
+  position: relative;
+  z-index: 3;
+  width: 30px;
+}
+
+.menu-btn_bar,
+.menu-btn_bar::before,
+.menu-btn_bar::after {
+  content: "";
+  background: var(--black);
+  background: var(--white);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-btn_bar::before {
+  top: -10px;
+}
+
+.menu-btn_bar::after {
+  top: 10px;
+}
+
+.menu-btn--open .menu-btn_bar,
+.menu-btn--open .menu-btn_bar::before,
+.menu-btn--open .menu-btn_bar::after {
+  transform: rotate(135deg);
+}
+
+.menu-btn--open .menu-btn_bar::before,
+.menu-btn--open .menu-btn_bar::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar,
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
+  background-color: var(--black);
 }
