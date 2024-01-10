@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — Glossary</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/glossary.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero_img" src="../public/img/Img_head_glossaire.webp"
+                alt="Chihiro watching the train go by at night">
+            <h1 class="hero_title">Glossary</h1>
+            <h3 class="hero_sub-title"></h3>
+        </section>
+        
+        <section class="section container">
+            <div>
+                <h2 class="section_title">Article One summer’s day</h2>
+                <p>Parabole - Un récit symbolique qui illustre une leçon morale ou spirituelle</p>
+                <p>Antagoniste - Le personnage ou la force opposée au protagoniste dans une histoire</p>
+                <p>Transcender - Aller au-delà de quelque chose, le dépasser</p>
+            </div>
+        </section>
+        </main>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

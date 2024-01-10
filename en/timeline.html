@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — Works of Sachiko Kashiwaba</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/timeline.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero_img" src="../public/img/Timeline/Img_head_timeline.webp"
+                alt="Le train vu du ciel dans le Voyage de Chihiro">
+            <h1 class="hero_title">Works of Sachiko Kashiwaba</h1>
+            <h3 class="hero_sub-title">Spirited Away</h3>
+        </section>
+        
+        <section class="section container">
+            <h3 class="chapo chapo-title">Discover the works of author Sachiko Kashiwaba through a timeline.</h3>
+        
+            <div class="frise">
+                <div class="frise_film">
+                    <figure class="frise_figure">
+                        <img class="frise_img" src="../public/img/Timeline/Frise_img1.webp"
+                            alt="First cover of the book The Marvelous Village Veiled in Mist">
+                        <figcaption class="frise_figaption">First cover of the book The Marvelous Village Veiled in Mist</figcaption>
+                    </figure>
+                    <div class="frise_text">
+                        <h3 class="frise_title">1975</h3>
+                        <p>The Marvelous Village Veiled in Mist</p>
+                    </div>
+                </div>
+        
+                <div class="frise_film">
+                    <figure class="frise_figure">
+                        <img class="frise_img" src="../public/img/Timeline/Frise_img2.webp"
+                            alt="First cover of the book Tsuzuki no toshokan">
+                        <figcaption class="frise_figaption">First cover of the book Tsuzuki no toshokan</figcaption>
+                    </figure>
+                    <div class="frise_text">
+                        <h3 class="frise_title">2010</h3>
+                        <p>Tsuzuki no toshokan</p>
+                    </div>
+                </div>
+        
+                <div class="frise_film">
+                    <figure class="frise_figure">
+                        <img class="frise_img" src="../public/img/Timeline/Frise_img3.webp"
+                            alt="First cover of the book Temple Alley Summer">
+                        <figcaption class="frise_figaption">First cover of the book Temple Alley Summer</figcaption>
+                    </figure>
+                    <div class="frise_text">
+                        <h3 class="frise_title">2011</h3>
+                        <p>Temple Alley Summer</p>
+                    </div>
+                </div>
+        
+                <div class="frise_film">
+                    <figure class="frise_figure">
+                        <img class="frise_img" src="../public/img/Timeline/Frise_img4.webp"
+                            alt="First cover of the book The House of the Lost on the Cape">
+                        <figcaption class="frise_figaption">First cover of the book The House of the Lost on the Cape</figcaption>
+                    </figure>
+                    <div class="frise_text">
+                        <h3 class="frise_title">2023</h3>
+                        <p>The House of the Lost on the Cape</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — The Marvelous Village Veiled in Mist</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/book.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero_title">The Marvelous Village Veiled in Mist, a bewitching enigma</h1>
+        <h3 class="hero_sub-title">Spirited Away</h3>
+        <img class="hero_img" src="../public/img/Livre/Img_head_book.webp"
+            alt="A forest passage in Spirited Away">
+    </section>
+    
+    <section class="section chapo container">
+        <div class="chapo_title">
+            <h3>Discover the spellbinding world of <strong>Sachiko Kashiwaba</strong> through her novel "The Marvelous Village Veiled in Mist".</h3>
+            <h3>Immerse yourself in <strong>a mysterious adventure</strong>, where secrets, magic and friendship combine to create an 
+                <strong>unforgettable reading</strong> unforgettable reading.
+            </h3>
+        </div>
+    
+        <div class="chapo_credit">
+            <p>by Viktor Ghirardelli</p>
+            <p>Published today at 14h45 | Read time 1 min</p>
+        </div>
+    </section>
+    
+    <section class="section container">
+        <h2 class="section_title">A Bewitching Universe</h2>
+        <div>
+            <p>The world created by Sachiko Kashiwaba in "The Marvelous Village Veiled in Mist" is simply bewitching. From the very
+            first pages, readers are transported to a magical city shrouded in mysterious mists.</p>
+            <p>The setting is so well described that you'll feel as if you're there yourself. Kashiwaba has mastered the art of
+            storytelling, giving us a world rich in detail, where every street, every character and every event seems to have a
+            hidden meaning. If you're looking for a literary escape, don't hesitate to dive into this spellbinding world.</p>
+        </div>
+        <figure class="section_figure">
+            <img class="section_img" src="../public/img/Livre/Livre_img1.webp"
+                alt="Front cover of the book The Marvelous Village Veiled in Mist">
+            <figcaption class="section_figure-figaption">Front cover of the book The Marvelous Village Veiled in Mist
+            </figcaption>
+        </figure>
+    </section>
+    
+    <section class="section container">
+        <h2 class="section_title">Secrets and Magic</h2>
+        <div>
+            <p>"The Marvelous Village Veiled in Mist” is a real treat for fans of mystery and magic. The story revolves around a group
+            of friends who discover a mysterious book, triggering a series of enigmatic events.</p>
+            <p>Secrets are slowly revealed, and the magic becomes more and more present as the plot develops. Readers will be
+            captivated by the many mysteries surrounding the city and its inhabitants. Each page reveals a new secret, leaving you
+            constantly on the edge of your seat and wanting to know what happens next.</p>
+        </div>
+        <figure class="section_figure">
+            <img class="section_img" src="../public/img/Livre/Livre_img2.webp" alt="Image de l’établissement des bainsImage of the bathing establishment">
+            <figcaption class="section_figure-figaption">Image of the bathing establishment</figcaption>
+        </figure>
+    </section>
+    
+    <section class="section container">
+        <h2 class="section_title">Unforgettable Friendships and Adventures</h2>
+        <div>
+            <p>At the heart of The Marvelous Village Veiled in Mist is a powerful message about friendship. The main characters, a
+            group of courageous children, demonstrate the power of unity and trust. Their journey through the misty streets of the
+            city brings them closer together and changes them forever.</p>
+            <p>Readers will be touched by the way friendship plays a central role in the story, prompting them to reflect on their own
+            relationships. Ultimately, this adventure leaves its mark not only on the magical world of the city, but also on the
+            hearts of readers.</p>
+        </div>
+        <figure class="section_figure">
+            <img class="section_img" src="../public/img/Livre/Livre_img3.webp" alt="Image of Haku in dragon and Chihiro">
+            <figcaption class="section_figure-figaption">Image of Haku in dragon and Chihiro</figcaption>
+        </figure>
+    
+        <div class="section_conclu">
+            <p>"Sachiko Kashiwaba's Marvelous Village Veiled in Mist is much more than just a book. It is an immersive experience, a
+            plunge into a mysterious and enchanting universe. Secrets, magic and friendship blend harmoniously to create a
+            captivating story that will leave you speechless.</p>
+            <p>If you're looking for a novel that will make you dream and reflect on the power of friendship, look no further.
+            Let yourself be swept away by this spellbinding mystery and explore The Marvelous Village Veiled in Mist today.
+            </p>
+        </div>
+    </section>
+    
+    <section class="section container">
+        <h2 class="section_title">Want to discover more?</h2>
+        <p>With the following article, enjoy a detailed analysis of the film's iconic music. Get ready to dive deeper into Joe
+        Hisaishi's fantastic universe.</p>
+        <article class="section_ card">
+            <img class="card_img" src="../public/img/Cards/Card_timeline.webp"
+                alt="Rail submergé par l'eau dans le Voyage de Chihiro">
+            <div class="card_caption">
+                <h3 class="card_title">Works of Sachiko Kashiwaba</h3>
+                <p class="card_text">Discover the works of author Sachiko Kashiwaba through a timeline.</p>
+                <a class="card_btn" href="../fr/timeline.html">Read more</a>
+            </div>
+        </article>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

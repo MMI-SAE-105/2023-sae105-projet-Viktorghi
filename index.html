@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Spirits">
 
     <title>Spirits</title>
-    
+
     <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
 
 </head>
 <body>
-      <a href="fr/index.html">Accueil</a>
-      <a href="en/index.html">Home page</a>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+    
+        <div class="header_end">
+            <a class="header_language" href="../en/index.html">
+                <img src="../public/icon/Language.svg" alt="Changement de langue">
+            </a>
+    
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+    
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a
+                            rencontré, on a juste du mal à s’en
+                            souvenir.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">La cité des brumes oubliées</a></li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Oeuvres de Sachiko Kashiwaba</a></li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossaire</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="section section_index container">
+            <a class="btn" href="fr/index.html">Accueil</a>
+            <a class="btn" href="en/index.html">Home page</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+    
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../fr/contact.html">Contact</a></li>
+                <li><a href="../fr/glossary.html">Glossaire</a></li>
+            </ul>
+        </nav>
+    
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer_section">
+            <p class="footer_title">Mentions légales</p>
+            <p>Projet réalisé dans le cadre d’un exercice pédagogique au département <a
+                    href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a>
+            </p>
+        </div>
+    </footer>
+      
 </body>
 </html>

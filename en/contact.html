@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — contact</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/contact.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero_img" src="../public/img/Img_head_contact.webp" alt="Chihiro and the faceless man on the train">
+            <h1 class="hero_title">Contact</h1>
+            <h3 class="hero_sub-title"></h3>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">About me</h2>
+            <div>
+                <p>My name is Viktor Ghirardelli, and I'm a first-year MMI student in Montbéliard. I've chosen to explore the theme of the
+                "replica" using the film "Chihiro's Journey" and the following quote: "You never forget the people you've met, you just
+                have trouble remembering them" by Zeniba.</p>
+                <p>My project, called "Spirits", aims to help people discover or rediscover the work and world of the film "The Voyage of
+                Chihiro". The emphasis is on nostalgia and the discovery of little-known elements of this universe.</p>
+            </div>
+        </section>
+        
+        <form class="section container form" action="#">
+            <h2 class="form_title">Contact form</h2>
+            <p class="form_intro">Below you will find a contact form to ask questions or get more information.</p>
+            <p class="form_input">
+                <label for="firstname">First name<br>
+                    <input type="text" id="firstname" name="first-name" value="">
+                </label>
+            </p>
+        
+            <p class="form_input">
+                <label for="lastname">Name<br>
+                    <input type="text" id="lastname" name="last-name" value="">
+                </label>
+            </p>
+        
+            <p class="form_input">
+                <label for="email">Email<br>
+                    <input type="email" id="email" name="email" value="">
+                </label>
+            </p>
+        
+            <p class="form_input">
+                <label for="birthday">Birthdate<br>
+                    <input type="date" id="birthday" name="birthday" value="">
+                </label>
+            </p>
+        
+            <p class="form_input">
+                <label for="phone">Phone number<br>
+                    <input type="tel" id="phone" name="phone" value="">
+                </label>
+            </p>
+        
+            <p class="form_input">
+                <label for="message">Message<br>
+                    <input type="text" id="message" name="message" value="">
+                </label>
+            </p>
+        
+            <p class="section">
+                <button class="btn" type="submit">Send</button>
+            </p>
+        </form>
+        
+        <section class="section container">
+            <h2 class="section_title">Other projects</h2>
+            <p>Here are the other sites created by my classmates with the same theme and the same constraints.</p>
+            <ul class="section_projet list-unstyled">
+                <li class="section_list"><a class="section_link" href="https://projet-s1-rawfootage.netlify.app/fr/">“Raw
+                        Footage” Axel Saltini</a></li>
+                <li class="section_list"><a class="section_link" href="#">“Keep The Illusion” Hugo Petit</a></li>
+                <li class="section_list"><a class="section_link"
+                        href="https://inquisitive-kheer-36d7ed.netlify.app/fr/">“Insaisissable” Adrien Choulet</a></li>
+                <li class="section_list"><a class="section_link" href="#">“HungerFuns” Selma Haoual</a></li>
+                <li class="section_list"><a class="section_link" href="https://kikis-journal.netlify.app/fr/">“Kiki’s Journal”
+                        Blandine Nahorny</a></li>
+                <li class="section_list"><a class="section_link"
+                        href="https://eclectic-sunshine-33b078.netlify.app/fr/">“Interstellar” Vincent Barré</a></li>
+                <li class="section_list"><a class="section_link" href="https://wizardsheart.mmeloni.fr/fr/">“Wizard’s Heart”
+                        Paola Meloni</a></li>
+                <li class="section_list"><a class="section_link" href="https://mystichowl.aamrouche.fr/fr/">“MysticHowl” Anis
+                        Amrouche</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

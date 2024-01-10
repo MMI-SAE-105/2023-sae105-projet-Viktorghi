@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — Hayao Miyazaki</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/director.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero_img" src="../public/img/Real/Img_head_director.webp"
+                alt="Pont et établissement des bains sous la pluie">
+            <h1 class="hero_title">Hayao Miyazaki, The Genius of Animationn</h1>
+            <h3 class="hero_sub-title">Hayao Miyazaki</h3>
+        </section>
+        
+        <section class="section chapo container">
+            <div class="chapo_title">
+                <h3>For decades, Japanese director Hayao Miyazaki has transported millions of viewers through his <strong>. His animated films, imbued with poetry and depth, have captured the hearts of young and old alike, making him a <strong>true master of the cinema</strong>.</h3>
+                <h3>Let's discover the man behind the masterpieces, his influence on the industry and his commitment to preserving our
+                planet.</h3>
+            </div>
+        
+            <div class="chapo_credit">
+                <p>by Viktor Ghirardelli</p>
+                <p>Published today at 14h45 | Read time 1 min</p>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">The Magic of Animation Studio Ghibli</h2>
+            <div>
+                <p>Since its creation in 1985, Studio Ghibli, founded by Hayao Miyazaki and his friend Isao Takahata, has revolutionised
+                the world of animation. The studio's films, some of which are true icons such as "My Neighbour Totoro" and "Spirited
+                Away", are acclaimed for their exquisite animation and original scripts.</p>
+                <p>They continue to inspire entire generations of artists and filmgoers, thanks to Miyazaki's unique artistic approach.</p>
+            </div>
+            <figure class="section_figure">
+                <img class="section_img" src="../public/img/Real/Real_img1.webp" alt="Photo by Hayao Miyazaki">
+                <figcaption class="section_figure-figaption">Photo by Hayao Miyazaki</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">The Committed Man</h2>
+            <div>
+                <p>Hayao Miyazaki is not only a talented director, but also a fervent defender of the environment. His films, such as
+                "Nausicaä of the Valley of the Wind", carry a profound message about preserving nature.</p>
+                <p>Outside the cinema, he is a committed environmentalist, campaigning for a cleaner, more sustainable world. His work and
+                convictions have become a source of inspiration for people around the world.</p>
+            </div>
+            <figure class="section_figure">
+                <img class="section_img" src="../public/img/Real/Real_img2.webp" alt="Studio Ghibli image with Totoro">
+                <figcaption class="section_figure-figaption">Studio Ghibli image with Totoro</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">Heritage in Motion</h2>
+            <div>
+                <p>Hayao Miyazaki's influence on the animation industry goes far beyond his own creations. His artistic methods, commitment
+                to quality and creativity have inspired a new generation of filmmakers.</p>
+                <p>Directors around the world recognise his contribution to the art of animation and are following in his footsteps,
+                creating films that bear the mark of his genius.</p>
+            </div>
+            <figure class="section_figure">
+                <img class="section_img" src="../public/img/Real/Real_img3.webp" alt="Photo by Hayao Miyazaki">
+                <figcaption class="section_figure-figaption">Photo by Hayao Miyazaki</figcaption>
+            </figure>
+        
+            <div class="section_conclu">
+                <p>In conclusion, Hayao Miyazaki is much more than just a director. He is a storyteller, a protector of nature and a
+                pioneer of animated cinema. His legacy is alive, vibrant and constantly evolving, continuing to amaze and inspire whole
+                generations. Through Studio Ghibli and his personal commitment, Miyazaki has marked the history of cinema in a way that
+                few other directors have been able to match.</p>
+                <p>His work transcends cultural boundaries and language barriers, touching the hearts of anyone who has had the privilege
+                of discovering his magical worlds on the big screen.</p>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">Filmography of Hayao Miyazaki</h2>
+            <div class="carrousel container" class="carrousel" x-data="{
+                            hrefCourant: '#ecran-1',
+                        }">
+        
+                <button @click="p=$refs.parent; p.scrollLeft -=p.clientWidth" class="carrousel_btn carrousel_btn-avant"
+                    aria-label="slideprécedant">
+                    &lt;
+                </button>
+                <button @click="p=$refs.parent; p.scrollLeft +=p.clientWidth" class="carrousel_btn carrousel_btn-apres"
+                    aria-label="slidesuivant">
+                    >
+                </button>
+        
+                <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+
+                                [...$refs.parent.children]
+                                .find(e=>e.getBoundingClientRect().x>=0).id">
+        
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel1.webp"
+                                alt="Le château de Cagliostro">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=12958.html">
+                                <h3>Le château de Cagliostro</h3>
+                            </a>
+                            <p class="carrousel_text">1h40 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel2.webp"
+                                alt="Nausicaä de la valée du vent">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40132.html">
+                                <h3>Nausicaä de la valée du vent</h3>
+                            </a>
+                            <p class="carrousel_text">1h57 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel3.webp"
+                                alt="Le château dans le ciel">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40133.html">
+                                <h3>Le château dans le ciel</h3>
+                            </a>
+                            <p class="carrousel_text">2h04 min</p>
+                            <p class="carrousel_text">Animation, aventure, fantastique</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel4.webp"
+                                alt="Mon voisin Totoro">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=14790.html">
+                                <h3>Mon voisin Totoro</h3>
+                            </a>
+                            <p class="carrousel_text">1h27 min</p>
+                            <p class="carrousel_text">Animation</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel5.webp"
+                                alt="Kiki la petite sorcière">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=40137.html">
+                                <h3>Kiki la petite sorcière</h3>
+                            </a>
+                            <p class="carrousel_text">1h42 min</p>
+                            <p class="carrousel_text">Animation, famille, anventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel6.webp" alt="Porco Rosso">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=10257.html">
+                                <h3>Porco Rosso</h3>
+                            </a>
+                            <p class="carrousel_text">1h29 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-7" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel7.webp"
+                                alt="Princesse Mononoké">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=37485.html">
+                                <h3>Princesse Mononoké</h3>
+                            </a>
+                            <p class="carrousel_text">2h15 min</p>
+                            <p class="carrousel_text">Animation, drame</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-8" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel8.webp"
+                                alt="Le voyage de Chihiro">
+                            <a class="carrousel_link" href="">
+                                <h3>Le voyage de Chihiro</h3>
+                            </a>
+                            <p class="carrousel_text">2h05 min</p>
+                            <p class="carrousel_text">Animation, aventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-9" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel9.webp"
+                                alt="Le château ambulant">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=50409.html">
+                                <h3>Le château ambulant</h3>
+                            </a>
+                            <p class="carrousel_text">1h59 min</p>
+                            <p class="carrousel_text">Animation, fantastique</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-10" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel10.webp"
+                                alt="Ponyo sur la falaise">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=127194.html">
+                                <h3>Ponyo sur la falaise</h3>
+                            </a>
+                            <p class="carrousel_text">1h41 min</p>
+                            <p class="carrousel_text">Animation, famille, aventure</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-11" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel11.webp" alt="Le vent se lève">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=197176.html">
+                                <h3>Le vent se lève</h3>
+                            </a>
+                            <p class="carrousel_text">2h07 min</p>
+                            <p class="carrousel_text">Animation, drame, historique, biopic</p>
+                        </figure>
+                    </div>
+        
+                    <div id="ecran-12" class="carrousel_ecran">
+                        <figure class="carrousel_card">
+                            <img class="carrousel_img" src="../public/img/Carrousel/Img_Carrousel12.webp"
+                                alt="Le garçon et le Héron">
+                            <a class="carrousel_link" href="https://www.allocine.fr/film/fichefilm_gen_cfilm=184989.html">
+                                <h3>Le garçon et le Héron</h3>
+                            </a>
+                            <p class="carrousel_text">2h 04min</p>
+                            <p class="carrousel_text">Animation, Drame, Aventure</p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">Want to discover more?</h2>
+            <p>With the following article, enjoy a detailed analysis of the film's iconic music. Get ready to dive deeper into Joe
+            Hisaishi's fantastic universe.</p>
+            <article class="section_ card">
+                <img class="card_img" src="../public/img/Cards/Card_musique.webp"
+                    alt="Rail submergé par l'eau dans le Voyage de Chihiro">
+                <div class="card_caption">
+                    <h3 class="card_title">One summer’s day</h3>
+                    <p class="card_text">Music has the extraordinary power to move us, transport us to imaginary worlds and create lasting memories. In this
+                    article, we delve into the magic of Joe Hisaishi through his masterpiece, "One Summer's Day." In three captivating acts,
+                    discover the composer's unique world, analyse the musical elements of this composition, and explore its close connection
+                    to the film "Spirited Away"</p>
+                    <a class="card_btn" href="../fr/music.html">Read more</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

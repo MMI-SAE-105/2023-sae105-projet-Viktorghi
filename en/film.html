@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — Spirited Away</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/film.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never
+                            Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero_img" src="../public/img/Movie/Img_head_quote.webp" alt="Pont dans le Voyage de Chihiro">
+            <h1 class="hero_title">Spirited Away, A Magical World to Discover</h1>
+            <h3 class="hero_sub-title">Spirited Away</h3>
+        </section>
+        
+        <section class="section chapo container">
+            <div class="chapo_title">
+                <h3>Japanese animation has a knack for plunging us into extraordinary worlds, but no film has captivated audiences as much
+                as <strong>"Spirited Away"</strong>.</h3>
+                <h3>Directed by Hayao Miyazaki, this <strong>masterpiece</strong> takes us into a fantastic world steeped in mystery. Let's discover the
+                world of this cult film in three acts: the story, the analysis, and the impact on viewers.</h3>
+            </div>
+        
+            <div class="chapo_credit">
+                <p>by Viktor Ghirardelli</p>
+                <p>Published today at 14h45 | Read time 1 min</p>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">The Bewitching Universe and Story</h2>
+            <div>
+                <p>"Spirited Away" tells the story of Chihiro, a 10-year-old girl who, after her parents are turned into pigs, finds
+                herself trapped in a spiritual world. To save them, she has to work in a public bath for the spirits, but this adventure
+                is just the prelude to an extraordinary journey.</p>
+                <p>"Spirited Away" tells the story of Chihiro, a 10-year-old girl who, after her parents are turned into pigs, finds
+                herself trapped in a spiritual world. To save them, she has to work in a public bath for the spirits, but this adventure
+                is just the prelude to an extraordinary journey.</p>
+            </div>
+            <figure class="section_figure">
+                <video class="section_video" src="../public/video/BA_Voyage_de_Chihiro.mp4" controls></video>
+                <figcaption class="section_figure-figaption">Trailer of the movie Spirited Away</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">An In-Depth Analysis</h2>
+            <div>
+                <p>The film stands out for its visual richness. Studios Ghibli have created a world of exceptional beauty, inspired by
+                Japanese mythology. Every frame is a work of art in itself, showcasing exquisite detail and an incredible variety of
+                creatures. The use of traditional animation and hand-drawn techniques lends an unrivalled warmth and authenticity.</p>
+                <p>Joe Hisaishi's music accompanies the images magnificently, intensifying the emotion of the film. This meticulous
+                aesthetic reinforces the power of the story and transports viewers into another world.</p>
+            </div>
+            <figure class="section_figure">
+                <img class="section_img" src="../public/img/Movie/Film_img2.webp" alt="Image of Chihiro stoking a fire">
+                <figcaption class="section_figure-figaption">Image of Chihiro stoking a fire</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">Lasting Meaning and Impact</h2>
+            <div>
+                <p>"Spirited Away" transcends mere entertainment. It explores universal themes of courage, resilience, compassion and
+                personal transformation. Spirited Away symbolises the transition from childhood to adulthood, with all the challenges
+                and discoveries that entails.</p>
+                <p>The film also invites us to reflect on our relationship with nature and the spiritual world, underlining the importance
+                of respect and harmony. It's a story that resonates deeply with viewers, encouraging them to ask questions about their
+                own journey through life.</p>
+            </div>
+            <figure class="section_figure">
+                <img class="section_img" src="../public/img/Movie/Film_img3.webp"
+                    alt="Image de Chihiro qui court sur les rails de trains submergés par l'eau.Image of Chihiro running on train tracks submerged in water">
+                <figcaption class="section_figure-figaption">Image of Chihiro running on train tracks submerged in water</figcaption>
+            </figure>
+        
+            <div class="section_conclu">
+                <p>In conclusion, "Spirited Away" is a cinematic masterpiece that continues to amaze and inspire entire generations.</p>
+                <p>With its captivating story, enchanting visual beauty and profound themes, it has established itself as a cinematic
+                treasure. Its spellbinding power remains intact, reminding us of the magic of cinema and discovery.</p>
+            </div>
+        </section>
+        
+        <section class="section container">
+            <h2 class="section_title">Want to discover more?</h2>
+            <p>Discover the life of Hayao Miyazaki in the following article. Get ready to dive deeper into Miyazaki's magical world.</p>
+            <article class="section_ card ">
+                <img class="card_img" src="../public/img/Cards/Card_real.webp"
+                    alt="Rail submergé par l'eau dans le Voyage de Chihiro">
+                <div class="card_caption">
+                    <h3 class="card_title">Hayao Miyasaki</h3>
+                    <p class="card_text">For decades, Japanese director Hayao Miyazaki has transported millions of viewers through his fantastic worlds. His
+                    animated films, imbued with poetry and depth, have captured the hearts of young and old alike, making him a true master
+                    of the cinema. Let's discover the man behind the masterpieces, his influence on the industry and his commitment to
+                    preserving our planet.</p>
+                    <a class="card_btn" href="../fr/director.html">Read more</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+                educational at the <a href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

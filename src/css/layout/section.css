@@ -44,3 +44,7 @@
   text-decoration: none;
   color: var(--black);
 }
+
+.section_index {
+  margin-top: 130px;
+}

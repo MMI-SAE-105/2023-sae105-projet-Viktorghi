@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="eng" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spirits">
+
+    <title>Spirits — Home page</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_start">
+            <a href="/">
+                <img class="header_logo" src="../public/icon/Logo.svg" alt="Logo spirits">
+            </a>
+        </div>
+
+        <div class="header_end">
+            <a class="header_language" href="../fr/index.html">
+                <img src="../public/icon/Language.svg" alt="Change of language">
+            </a>
+
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+            </button>
+
+            <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu_list list-unstyled">
+                    <li class="menu_item"><a class="menu_link" href="quote.html">“Once You've Met Someone You Never Really Forget Them. It Just Takes A While For Your Memories To Return.”</a></li>
+                    <li class="menu_item"><a class="menu_link" href="film.html">Spirited Away</a></li>
+                    <li class="menu_item"><a class="menu_link" href="director.html">Hayao Miyazaki</a></li>
+                    <li class="menu_item"><a class="menu_link" href="music.html">One summer’s day</a></li>
+                    <li class="menu_item"><a class="menu_link" href="book.html">The Marvelous Village Veiled in Mist</a></li>
+                    <li class="menu_item"><a class="menu_link" href="timeline.html">Works of Sachiko Kashiwaba</a>
+                    </li>
+                    <li class="menu_item"><a class="menu_link" href="glossary.html">Glossary</a></li>
+                    <li class="menu_item"><a class="menu_link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="head">
+            <div class="head_dots-start">
+                <img src="../public/icon/DotsP.svg" alt="Pink dots">
+            </div>
+            <h4 class="head_title">“Once You've Met Someone You Never Really Forget Them. It Just Takes A While For Your Memories To Return.”</h4>
+            <div class="head_img">
+                <img src="../public/img/Home/Head_Home.webp" alt="Image of Haku and Chihiro">
+            </div>
+            <div class="head_dots-end">
+                <img src="../public/icon/DotsP.svg" alt="Pink dots">
+            </div>
+
+            <div class="head_arrow">
+                <img class="head_arrow" src="../public/icon/Down-arrow.svg" alt="Flèche vers le bas">
+            </div>
+        </section>
+
+        <section class=" section container">
+            <h2 class="section_title">Spirited Away, explore the Magical Universe</h2>
+            <div>
+                <p>Discover the captivating world of "Spirited Away"! Immerse yourself in Hayao Miyazaki's magical work and explore
+                Zeniba's famous line: “Once You've Met Someone You Never Really Forget Them.</p>
+                <p>It Just Takes A While For Your Memories To Return.” Vibrate to the haunting music of "One Summer's Day" and explore the
+                book that inspired this masterpiece, "The Marvelous Village Veiled in Mist". An unforgettable adventure awaits you.</p>
+            </div>
+            <figure class="section_figure"></figure>
+            <img class="section_img" src="../public/img/Home/Home_eng_affiche.webp" alt="Spirited Away Poster">
+            <figcaption class="section_figure-figaption">Spirited Away Poster</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <img class="section_dots-start" src="../public/icon/DotsG.svg" alt="Green dots">
+            <h2 class="section_title container">Trendy articles</h2>
+
+            <article class="section_ card card container">
+                <img class="card_img" src="../public/img/Cards/Card_quote.webp"
+                    alt="Rail submerged in water in Chihiro's Journey">
+                <div class="card_caption">
+                    <h3 class="card_title">“Once You've Met Someone You Never Really Forget Them. It Just Takes A While For Your Memories To Return.”</h3>
+                    <p class="card_text">In Studio Ghibli's iconic animated film "Spirited Away", an enigmatic quote from Zeniba resonates deeply: “Once You've
+                    Met Someone You Never Really Forget Them. It Just Takes A While For Your Memories To Return.” This line prompts a
+                    profound reflection on the nature of encounters and memory. Discover how this maxim applies to our own lives and why it
+                    resonates with so many people.</p>
+                    <a class="card_btn" href="../fr/quote.html">Reed more</a>
+                </div>
+            </article>
+
+            <article class="section_ card container">
+                <img class="card_img" src="../public/img/Cards/Card_film.webp"
+                    alt="Bridge and building">
+                <div class="card_caption">
+                    <h3 class="card_title">Spirited Away</h3>
+                    <p class="card_text">Japanese animation has a knack for plunging us into extraordinary worlds, but no film has captivated audiences as much
+                    as "Spirited Away". Directed by Hayao Miyazaki, this masterpiece takes us into a fantastic world steeped in mystery.
+                    Let's discover the world of this cult film in three acts: the story, the analysis, and the impact on viewers.</p>
+                    <a class="card_btn" href="../fr/film.html">Reed more</a>
+                </div>
+            </article>
+
+            <article class="section_ card container">
+                <img class="card_img" src="../public/img/Cards/Card_real.webp"
+                    alt="bridge under the rain with the baths building">
+                <div class="card_caption">
+                    <h3 class="card_title">Hayao Miyasaki</h3>
+                    <p class="card_text">For decades, Japanese director Hayao Miyazaki has transported millions of viewers through his fantastic worlds. His
+                    animated films, imbued with poetry and depth, have captured the hearts of young and old alike, making him a true master
+                    of the cinema. Let's discover the man behind the masterpieces, his influence on the industry and his commitment to
+                    preserving our planet.</p>
+                    <a class="card_btn" href="../fr/director.html">Reed more</a>
+                </div>
+            </article>
+
+            <article class="section_ card container">
+                <img class="card_img" src="../public/img/Cards/Card_musique.webp"
+                    alt="Haku and chihiro flying in the sky">
+                <div class="card_caption">
+                    <h3 class="card_title">One summer’s day</h3>
+                    <p class="card_text">Music has the extraordinary power to move us, transport us to imaginary worlds and create lasting memories. In this
+                    article, we delve into the magic of Joe Hisaishi through his masterpiece, "One Summer's Day." In three captivating acts,
+                    discover the composer's unique world, analyse the musical elements of this composition, and explore its close connection
+                    to the film "Spirited Away"</p>
+                    <a class="card_btn" href="../fr/music.html">Reed more</a>
+                </div>
+            </article>
+
+            <article class="section_ card container">
+                <img class="card_img" src="../public/img/Cards/Card_livre.webp"
+                    alt="Path in a forest">
+                <div class="card_caption">
+                    <h3 class="card_title">The Marvelous Village Veiled in Mist</h3>
+                    <p class="card_text">Discover the spellbinding world of Sachiko Kashiwaba through her novel "The Marvelous Village Veiled in Mist". Immerse
+                    yourself in a mysterious adventure, where secrets, magic and friendship combine to create an unforgettable reading
+                    experience.
+                    
+                    Plongez dans une aventure mystérieuse, où les secrets, la magie, et l'amitié se mêlent pour créer une expérience de
+                    lecture inoubliable.</p>
+                    <a class="card_btn" href="../fr/book.html">Reed more</a>
+                </div>
+            </article>
+
+            <img class="section_dots-end" src="../public/icon/DotsG.svg" alt="Points vert">
+        </section>
+
+        <section class="section container">
+            <h2 class="section_title">Contact</h2>
+            <p>Find out more about this project in the "About" section and discover all my colleagues' other projects in the "Other
+            projects" section.</p>
+            <a class="btn" href="../fr/contact.html">See more</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="footer_logo" href="/">
+            <img src="../public/icon/Logo.svg" alt="Logo spirits">
+        </a>
+
+        <nav class="footer_menu">
+            <ul class="list-unstyled footer_list">
+                <li><a href="../eng/contact.html">Contact</a></li>
+                <li><a href="../eng/glossary.html">Glossary</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer_section">
+            <p class="footer_title">Informations</p>
+            <p>Viktor Ghirardelli</p>
+            <a href="mailto:Vikghir@gmail.com">Vikghir@gmail.com</a>
+            <div class="footer_social">
+                <ul class="list-unstyled footer_social-list ">
+                    <li><a href="https://www.linkedin.com" aria-label="linkedIn"><img src="../public/icon/LinkedIn.svg"
+                                alt="icone linkedIn"></a></li>
+                    <li><a href="https://instagram.com" aria-label="instagram"><img src="../public/icon/Insta.svg"
+                                alt="icone instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_section">
+            <p class="footer_title">Legal Mentions</p>
+            <p>Project carried out as part of an exercise
+            educational at the <a
+                    href="https://mmimontbeliard.com/">MMI
+                    Montbéliard</a> department
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
