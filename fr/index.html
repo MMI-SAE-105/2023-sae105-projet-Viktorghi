@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Spirits">
@@ -11,9 +11,12 @@
 
     <link rel="stylesheet" href="../src/css/style.css">
 
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+
 </head>
 
-<body>
+<body x-data="{ atTop: true }">
     <header class="header">
         <div class="header_start">
             <a href="/">
@@ -26,13 +29,15 @@
                 <img src="../public/icon/Language.svg" alt="Changement de langue">
             </a>
             
-            <button class="header_menu-btn menu-btn">
+            <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
                 <img src="../public/icon/Menu.svg" alt="Menu">
             </button>
             
-            <nav class="header_menu menu">
+            <nav class="header_menu menu"  id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <div class="menu_start">
-                    <ul class="menu_list">
+                    <ul class="menu_list list-unstyled">
                         <li class="menu_item"><a class="menu_link" href="quote.html">“On n’oublie jamais les gens qu’on a rencontré, on a juste du mal à s’en
                                 souvenir.”</a></li>
                         <li class="menu_item"><a class="menu_link" href="film.html">Le voyage de chihiro</a></li>
