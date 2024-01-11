@@ -19,6 +19,10 @@
 
 .header_language {
   width: 32px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
 }
 
 .header_logo {
