@@ -2,12 +2,12 @@
   position: relative;
   color: var(--white);
   background-color: var(--black);
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-top: 100px;
-  margin-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .hero_img {
@@ -19,6 +19,7 @@
   bottom: 0;
   right: 0;
   z-index: 0;
+  object-fit: cover;
 }
 
 .hero_title,
@@ -27,8 +28,4 @@
   z-index: 1;
   padding-left: 30px;
   padding-right: 30px;
-}
-
-.hero_sub-title {
-  padding-bottom: 20px;
 }
